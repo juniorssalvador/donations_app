@@ -49,6 +49,21 @@ class _LoginViewState extends State<LoginView> {
       ),
     );
 
+    final loginGoogle = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.redAccent,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {},
+        child: Text("Conta Google",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
+
     return Scaffold(
         appBar: AppBar(
           title: Text('Donations'),
@@ -73,13 +88,6 @@ class _LoginViewState extends State<LoginView> {
                     ],
                   ),
                 ),
-//                Container(
-//                    alignment: Alignment.center,
-//                    padding: EdgeInsets.all(10),
-//                    child: Text(
-//                      'Sign in',
-//                      style: TextStyle(fontSize: 20),
-//                    )),
                 Container(
                   padding: EdgeInsets.all(10),
                   child: emailField,
@@ -99,6 +107,14 @@ class _LoginViewState extends State<LoginView> {
                   height: 50,
                   padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: loginBtn,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 50,
+                  padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: loginGoogle,
                 ),
                 Container(
                     child: Row(
